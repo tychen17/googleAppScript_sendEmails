@@ -1,9 +1,9 @@
 function sendCustomEmails() {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Sheet1');
-  var startRow = 2; // Start at the second row because the first row contains the column headers
+  var startRow = 2; // Start at the second row
   var numRows = sheet.getLastRow() - 1; // Number of rows to process
   var dataRange = sheet.getRange(startRow, 1, numRows, sheet.getLastColumn());
-  var data = dataRange.getValues(); // Fetch values for each row in the range
+  var data = dataRange.getValues();
 
   for (var i = 0; i < data.length; ++i) {
     var row = data[i];
